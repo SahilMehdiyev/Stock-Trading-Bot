@@ -1,0 +1,15 @@
+Django>=5.1,<5.2
+django-timescaledb
+dj-database-url
+jupyter
+requests
+psycopg[binary]
+python-decouple
+pytz
+Celery
+Redis
+django-celery-beat 
+django-celery-results
+django-admin-interface
+django-admin-rangefilter
+openai
