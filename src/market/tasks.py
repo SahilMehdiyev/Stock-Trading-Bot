@@ -1,4 +1,5 @@
-from datetime import timedelta, timezone
+from datetime import timedelta
+from django.utils import timezone
 from django.apps import apps
 from .utils import batch_insert_stock_data
 import helpers.clients as helpers_clients
@@ -34,7 +35,7 @@ def sync_company_stock_quotes(company_id, days_ago=32,
 
 def sync_stock_data():
     Company = apps.get_model('market', 'Company')
-    companies = Company.objects.filter(active=True).values_list('id')
+    companies = Company.objects.filter(active=True).values_list('id', flat=True)
     for company_id in companies:
         sync_company_stock_quotes(company_id)
     
