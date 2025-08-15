@@ -15,4 +15,5 @@ dependencies = [
     "psycopg[binary]",
     "python-decouple",
     "pytz>=2025.2",
+    "dj-database-url>=3.0.1",
 ]
